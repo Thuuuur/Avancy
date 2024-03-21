@@ -30,9 +30,8 @@
 
 .navbar-menu {
     display: flex;
-    
     list-style: none;
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 10px; /* Espaçamento entre os itens */
 }
 
 .nav-item a {
@@ -49,7 +48,6 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    order: 2; /* Mover o botão de login para o meio */
 }
 
 .navbar-toggle {
@@ -79,9 +77,10 @@
         flex-direction: column;
         position: absolute;
         top: 70px;
-        right: 0;
+        right: 0px;
         background-color: #333;
         padding: 10px;
+        text-align: center;
     }
 
     .active .nav-item {
@@ -89,15 +88,14 @@
     }
 
     .login {
-        order: 2; /* Mover o botão de login de volta para o meio */
+        display: none; /* Ocultar botão de login em dispositivos móveis, ajuste conforme necessário */
     }
 
-    .navbar-container {
-        flex-direction: row;
-        align-items: center;
+    .hamburger-only {
+        display: none; /* Oculta o botão de login em telas maiores */
     }
 
-    .navbar-toggle {
-        order: 2; /* Mover o menu hambúrguer para o meio */
+    .login.hamburger-only {
+        display: block; /* Exibe o botão de login apenas em telas menores (hamburguer) */
     }
 }
